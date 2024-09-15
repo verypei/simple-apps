@@ -22,10 +22,16 @@ pipeline {
             }
         }
     
-        stage('DOCKER COMPOSE') {
+        stage('DOCKER COMPOSE BUILD') {
             steps {
                 sh '''docker compose build
-                docker compose up -d
+                '''
+            }
+        }
+
+        stage('DOCKER COMPOSE UP') {
+            steps {
+                sh '''docker compose up -d
                 '''
             }
         }
