@@ -17,7 +17,7 @@ pipeline {
     
         stage('run SONAR QUBE') {
             steps {
-                sh '''sonar-scanner  -Dsonar.projectKey=simple-apps -Dsonar.sources=. -Dsonar.host.url=http://172.23.1.21:9000 -Dsonar.login=sqp_59c547e97eb76f988e19e5029e1aee103e9048cf'
+                sh '''sonar-scanner  -Dsonar.projectKey=simple-apps -Dsonar.sources=. -Dsonar.host.url=http://172.23.1.21:9000 -Dsonar.login=sqp_59c547e97eb76f988e19e5029e1aee103e9048cf
                    '''
             }
         }
